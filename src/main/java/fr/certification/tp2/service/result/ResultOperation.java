@@ -1,7 +1,9 @@
 package fr.certification.tp2.service.result;
 
 public class ResultOperation implements Result {
-    private int a, b, c;
+    private int a;
+    private int b;
+    private int c;
 
     public ResultOperation(int a, int b, int c) {
         this.a = a;
