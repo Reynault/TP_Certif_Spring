@@ -2,7 +2,7 @@ package fr.certification.tp2.model.operation.binary;
 
 import fr.certification.tp2.model.operation.Value;
 
-public class Substraction extends BinaryOperation{
+public class Substraction extends BinaryOperation {
     public Substraction(Value value, Value value1) {
         super(value, value1);
     }
@@ -13,7 +13,7 @@ public class Substraction extends BinaryOperation{
     }
 
     @Override
-    public int compute() throws ArithmeticException{
+    public int compute() throws ArithmeticException {
         return left.compute() - right.compute();
     }
 }

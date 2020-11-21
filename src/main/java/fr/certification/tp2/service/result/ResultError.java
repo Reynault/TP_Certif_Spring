@@ -1,6 +1,6 @@
 package fr.certification.tp2.service.result;
 
-public class ResultError implements Result{
+public class ResultError implements Result {
     private String error;
 
     public ResultError(String error) {

@@ -3,7 +3,6 @@ package fr.certification.tp2.control;
 import fr.certification.tp2.service.OperationsService;
 import fr.certification.tp2.service.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.NumberFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

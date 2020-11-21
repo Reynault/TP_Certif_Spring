@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class OperationsService {
 
-    private Result handleException(Operation operation, int a, int b){
+    private Result handleException(Operation operation, int a, int b) {
         try {
             int c = operation.compute();
             return new ResultOperation(a, b, c);

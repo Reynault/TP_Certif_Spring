@@ -13,7 +13,7 @@ public class Value implements Operation {
     }
 
     @Override
-    public int compute() throws ArithmeticException{
+    public int compute() throws ArithmeticException {
         return value;
     }
 }
