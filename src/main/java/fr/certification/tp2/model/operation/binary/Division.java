@@ -8,7 +8,7 @@ public class Division extends BinaryOperation {
     }
 
     @Override
-    public int compute() throws ArithmeticException {
+    public int compute(){
         int r = right.compute();
         if (r == 0)
             throw new ArithmeticException("Division by Zero");

@@ -13,7 +13,7 @@ public class Multiplication extends BinaryOperation {
     }
 
     @Override
-    public int compute() throws ArithmeticException {
+    public int compute(){
         return left.compute() * right.compute();
     }
 }

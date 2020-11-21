@@ -1,10 +1,10 @@
 package fr.certification.tp2.model.operation;
 
 public class Value implements Operation {
-    private int value;
+    private final int computedValue;
 
-    public Value(int value) {
-        this.value = value;
+    public Value(int computedValue) {
+        this.computedValue = computedValue;
     }
 
     @Override
@@ -13,7 +13,7 @@ public class Value implements Operation {
     }
 
     @Override
-    public int compute() throws ArithmeticException {
-        return value;
+    public int compute(){
+        return computedValue;
     }
 }

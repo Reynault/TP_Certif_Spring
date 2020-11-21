@@ -8,6 +8,8 @@ import fr.certification.tp2.model.operation.binary.Multiplication;
 import fr.certification.tp2.model.operation.binary.Substraction;
 
 public class OperationFabric {
+    private OperationFabric(){}
+
     public static Operation add(int a, int b) {
         return new Addition(new Value(a), new Value(b));
     }
