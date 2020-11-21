@@ -1,12 +1,16 @@
 package fr.certification.tp2.control;
 
+import io.restassured.RestAssured;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import static io.restassured.RestAssured.when;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
-@SpringBootTest
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class OperationsControllerTest {
 
     @Test
@@ -41,7 +45,7 @@ class OperationsControllerTest {
 
         // test
         when().get("/adder/divide?a=" + a + "&b=" + b).then().assertThat()
-            .body("error", equalTo("Division by Zero"));
+                .body("error", equalTo("Division by Zero"));
     }
 
     @Test
