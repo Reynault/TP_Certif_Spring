@@ -14,4 +14,9 @@ public class ResultError implements Result {
     public void setError(String message) {
         this.error = message;
     }
+
+    @Override
+    public boolean isError() {
+        return true;
+    }
 }

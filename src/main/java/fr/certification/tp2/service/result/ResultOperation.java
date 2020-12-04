@@ -34,4 +34,9 @@ public class ResultOperation implements Result {
     public void setC(int c) {
         this.c = c;
     }
+
+    @Override
+    public boolean isError() {
+        return false;
+    }
 }
