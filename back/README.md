@@ -1,12 +1,23 @@
-# TP - Rest avec Spring
+# Back-end
 
 ## Descriptif
 
-Ce TP se compose de 3 parties. Il faudra rendre uniquement la 3ème partie, mais
-vous aurez besoin des 2 autres parties pour faire fonctionner la troisième. Faites
-bien attention d’avoir des éléments fonctionnels au début de chaque séance!
+This repository contains a Spring Boot application that provides a Rest service that allows you to compute basics operations. This project serve as an example about the use of Serenity behavior tests.
 
-## Fonctionnalités
+## Installation
 
-Créez un API qui a les fonctionnalités similaires à [l’exemple fourni](https://github.com/Reynault/TP_Certif_Spring/blob/master/doc/tp-bootiful-tests-api.pdf). 
-Vous écrirez une classe de test avec JUnit, qui teste tous les controlleurs REST.
+This project was made with maven and to install it, you'll just have to go to the root and to run thoses commands:
+
+- This one will clean and verify unit and behavior tests
+
+```
+$ mvn verify
+```
+
+- This one will launch the Rest service
+
+```
+$ mvn spring-boot:run
+```
+
+It's important to notice that serenity tests are not detected when using mvn verify directly. In order to see the results, you'll have to execute the tests with IntellIj first for whatever reason.
