@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping(value = "/adder", produces = "application/json")
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class OperationsController {
     private final OperationsService operationsService;

@@ -1,0 +1,43 @@
+<mat-card class="main-container">
+  <div>
+    <h1 class="title">TP2</h1>
+  </div>
+</mat-card>
+
+<mat-card class="main-container">
+  <form novalidate [formGroup]="this.form">
+    <mat-form-field class="form-container">
+      <mat-label>First Operand</mat-label>
+      <input matInput formControlName="a" type="number" id="a" required/>
+      <mat-error *ngIf="form.get('a').dirty && form.get('a').hasError('max')">
+        Valeur maximale: <strong>99999999</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-container">
+      <mat-label>Second Operand</mat-label>
+      <input matInput formControlName="b" type="number" id="b" required/>
+      <mat-error *ngIf="form.get('b').dirty && form.get('b').hasError('max')">
+        Valeur maximale: <strong>99999999</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="form-container">
+      <mat-label>Operator</mat-label>
+      <mat-select matInput formControlName="operator" id="operator" required>
+        <mat-option value="1">+</mat-option>
+        <mat-option value="2">-</mat-option>
+        <mat-option value="3">/</mat-option>
+        <mat-option value="4">x</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div>
+      <button mat-raised-button color="primary" type="submit" (click)="sendRequest()">Compute</button>
+    </div>
+  </form>
+</mat-card>
+
+<mat-card class="main-container">
+  <div>
+    <h2>Result</h2>
+    <p>{{result}}</p>
+  </div>
+</mat-card>
